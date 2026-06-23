@@ -1,0 +1,16 @@
+[Unit]
+Description=Open5GS WebUI
+After=mongod.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/<your-user>/open5gs/webui
+Environment=HOSTNAME=0.0.0.0
+Environment=PORT=9999
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=5
+User=<your-user>
+
+[Install]
+WantedBy=multi-user.target
