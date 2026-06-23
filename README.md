@@ -369,7 +369,7 @@ Once logged in, a subscriber was added via **Subscribers → +** with the identi
 | Subscriber Key (K) | `00112233445566778899aabbccddeeff` |
 | OPc | `63BFA50EE6523365FF14C1F45F88737D` |
 | AMF value | `8000` |
-| APN / DNN | `internet` |
+| APN / DNN | `srsapn` |
 | SST | `1` |
 
 > Note: the IMSI originally planned ended in `...780`, but the one actually provisioned ended in `...788`. Since the IMSI is just an identifier, this is fine — what matters is that **both sides match exactly**.
