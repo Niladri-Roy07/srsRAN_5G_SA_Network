@@ -1,0 +1,26 @@
+# Build artifacts
+build/
+*.o
+*.so
+*.a
+
+# srsRAN / Open5GS runtime logs and captures
+*.log
+*.pcap
+/tmp/
+
+# Node (Open5GS WebUI)
+node_modules/
+.next/
+npm-debug.log*
+
+# Editor / OS clutter
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets — never commit real subscriber keys, certs, or env files
+*.pem
+*.key
+.env
