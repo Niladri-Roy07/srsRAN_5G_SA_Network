@@ -93,7 +93,7 @@ Each PC drives its own USRP B210, and the two communicate over the air (or via c
 | IMSI | `001010123456788` |
 | Subscriber Key (K) | `00112233445566778899aabbccddeeff` |
 | OPc | `63BFA50EE6523365FF14C1F45F88737D` |
-| APN / DNN | `srsapn` |
+| APN / DNN | `srsapn/internet` |
 
 > The IMSI above is just a lab identifier — any valid value works as long as it matches **exactly** between the Open5GS subscriber record and the `ue.conf` `[usim]` block.
 
@@ -369,7 +369,7 @@ Once logged in, a subscriber was added via **Subscribers → +** with the identi
 | Subscriber Key (K) | `00112233445566778899aabbccddeeff` |
 | OPc | `63BFA50EE6523365FF14C1F45F88737D` |
 | AMF value | `8000` |
-| APN / DNN | `srsapn` |
+| APN / DNN | `srsapn/internet` |
 | SST | `1` |
 
 > Note: the IMSI originally planned ended in `...780`, but the one actually provisioned ended in `...788`. Since the IMSI is just an identifier, this is fine — what matters is that **both sides match exactly**.
@@ -694,7 +694,7 @@ cp /usr/local/share/srsran/ue.conf.example ~/srsRAN_4G/build/ue.conf
 
 The UE config went through several rounds of correction:
 
-- **APN** changed from a placeholder `srsapn` to `internet`, matching the Open5GS subscriber/APN config. Or sometime keep as it is.
+- **APN** changed from a placeholder `srsapn` to `internet`, matching the Open5GS subscriber/APN config. Or sometime keep as it is but should match with Open5GS subscriber/APN config.
 - **IMSI** corrected to `001010123456788` to exactly match the subscriber actually provisioned in the Open5GS WebUI.
 - **`netns = ue1`** removed (set empty) — a named network namespace wasn't pre-created on the system, which would have broken TUN interface setup.
 - **`device_args`** given an explicit `clock=internal` to match the gNB's own internal clock reference, since no shared GPSDO was available between the two B210s.
