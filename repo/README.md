@@ -93,7 +93,7 @@ Each PC drives its own USRP B210, and the two communicate over the air (or via c
 | IMSI | `001010123456788` |
 | Subscriber Key (K) | `00112233445566778899aabbccddeeff` |
 | OPc | `63BFA50EE6523365FF14C1F45F88737D` |
-| APN / DNN | `internet` |
+| APN / DNN | `srsapn` |
 
 > The IMSI above is just a lab identifier — any valid value works as long as it matches **exactly** between the Open5GS subscriber record and the `ue.conf` `[usim]` block.
 
