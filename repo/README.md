@@ -55,7 +55,7 @@ Each PC drives its own USRP B210, and the two communicate over the air (or via c
 | SDR | Ettus USRP B210 | ×2 |
 | 5G Core | Open5GS | v2.7.6 |
 | gNB (RAN) | srsRAN Project | 25.10.0 |
-| UE | srsRAN_4G (srsue) | — |
+| UE | srsRAN_4G (srsue) | — | 25.10.0 |
 
 ## Architecture
 
