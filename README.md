@@ -694,7 +694,7 @@ cp /usr/local/share/srsran/ue.conf.example ~/srsRAN_4G/build/ue.conf
 
 The UE config went through several rounds of correction:
 
-- **APN** changed from a placeholder `srsapn` to `internet`, matching the Open5GS subscriber/APN config.
+- **APN** changed from a placeholder `srsapn` to `internet`, matching the Open5GS subscriber/APN config. Or sometime keep as it is.
 - **IMSI** corrected to `001010123456788` to exactly match the subscriber actually provisioned in the Open5GS WebUI.
 - **`netns = ue1`** removed (set empty) — a named network namespace wasn't pre-created on the system, which would have broken TUN interface setup.
 - **`device_args`** given an explicit `clock=internal` to match the gNB's own internal clock reference, since no shared GPSDO was available between the two B210s.
